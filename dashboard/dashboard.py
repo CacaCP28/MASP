@@ -6,7 +6,7 @@ import os
 import psycopg2
 
 # Conecta ao banco usando a variável de ambiente
-DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASE_URL = os.getenv("postgresql://postgres:@gt2204@@db.cdlwtviryyppmwgizsau.supabase.co:5432/postgres")
 conn = psycopg2.connect(DATABASE_URL)
 
 query = "SELECT timestamp, count FROM contagem"
